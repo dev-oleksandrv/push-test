@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import {SetupCmp} from "@/components/SetupCmp";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,14 +18,14 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-    <body className={inter.className}>{children}
-    <script src="https://cdn.by.wonderpush.com/sdk/1.1/wonderpush-loader.min.js" async></script>
-    <script>
-      window.WonderPush = window.WonderPush || [];
-      WonderPush.push(["init", {
-      webKey: "c659bc5984cf8ddb1f5c0ceeab978155ab2763f7ee6ae023d57a622c36a4512c",
-    }]);
-    </script>
+    <head>
+      <script src="https://cdn.by.wonderpush.com/sdk/1.1/wonderpush-loader.min.js" async></script>
+    </head>
+
+    <body className={inter.className}>
+    {children}
+
+    <SetupCmp/>
 
     </body>
     </html>
