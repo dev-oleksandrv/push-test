@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+
+    <body className={inter.className}>{children}
+    <script charSet="UTF-8" src="//web.webpushs.com/js/push/bf279801cedd1128580201717dd195b3_1.js" async></script>
+
+    </body>
     </html>
   );
 }
