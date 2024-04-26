@@ -18,7 +18,13 @@ export default function RootLayout({
     <html lang="en">
 
     <body className={inter.className}>{children}
-    <script charSet="UTF-8" src="//web.webpushs.com/js/push/bf279801cedd1128580201717dd195b3_1.js" async></script>
+    <script src="https://cdn.by.wonderpush.com/sdk/1.1/wonderpush-loader.min.js" async></script>
+    <script>
+      window.WonderPush = window.WonderPush || [];
+      WonderPush.push(["init", {
+      webKey: "c659bc5984cf8ddb1f5c0ceeab978155ab2763f7ee6ae023d57a622c36a4512c",
+    }]);
+    </script>
 
     </body>
     </html>
